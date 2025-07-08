@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Home</title></head>
+<body>
+<h1>NanoMDM Web Interface</h1>
+<ul>
+  <li><a href="/push">Send Push</a></li>
+  <li><a href="/enqueue">Enqueue Command</a></li>
+  <li><a href="/pushcert">Upload Push Cert</a></li>
+  <% if (scepUrl) { %>
+  <li><a href="/scep-ca">Download SCEP CA</a></li>
+  <% } %>
+</ul>
+<a href="/logout">Logout</a>
+</body>
+</html>
