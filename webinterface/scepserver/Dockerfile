@@ -11,3 +11,4 @@ WORKDIR /data
 EXPOSE 8080
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["scepserver"]
+

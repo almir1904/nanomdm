@@ -33,3 +33,4 @@ Dieses Verzeichnis enthält zudem einen einfachen Docker-Build für einen SCEP-S
 Mit `docker-compose up` werden NanoMDM, der SCEP-Server und das Webinterface zusammen gestartet. Die SCEP-Daten werden im Volume `scepdata` persistent gespeichert.
 
 Beim ersten Start initialisiert der Container den SCEP-Server automatisch, falls noch keine CA-Daten vorhanden sind.
+
