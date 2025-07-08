@@ -1,0 +1,29 @@
+version: '3'
+services:
+  nanomdm:
+    image: ghcr.io/micromdm/nanomdm:latest
+    ports:
+      - "9000:9000"
+    volumes:
+      - dbkv:/app/dbkv
+      - db:/app/db
+  scep:
+    build: ./scepserver
+    ports:
+      - "8080:8080"
+    volumes:
+      - scepdata:/data
+  web:
+    build: .
+    environment:
+      - API_BASE=http://nanomdm:9000
+      - SCEP_URL=http://scep:8080
+    ports:
+      - "3000:3000"
+    depends_on:
+      - nanomdm
+      - scep
+volumes:
+  dbkv:
+  db:
+  scepdata:
