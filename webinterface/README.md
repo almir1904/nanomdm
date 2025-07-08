@@ -31,3 +31,6 @@ In einem `docker-compose.yml` kann NanoMDM gemeinsam mit dem Webinterface gestar
 Dieses Verzeichnis enthält zudem einen einfachen Docker-Build für einen SCEP-Server auf Basis des [micromdm/scep](https://github.com/micromdm/scep) Projekts. Der Docker-Container kann innerhalb von `docker-compose` gestartet werden und stellt auf Port 8080 einen SCEP-Endpunkt bereit.
 
 Mit `docker-compose up` werden NanoMDM, der SCEP-Server und das Webinterface zusammen gestartet. Die SCEP-Daten werden im Volume `scepdata` persistent gespeichert.
+
+Beim ersten Start initialisiert der Container den SCEP-Server automatisch, falls noch keine CA-Daten vorhanden sind.
+
